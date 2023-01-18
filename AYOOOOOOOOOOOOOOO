@@ -1,0 +1,274 @@
+
+
+print (" \n\nThe House Of Doom\n\n")
+
+
+
+def main():
+    user_input = input ("\nReady Player One? ")
+
+    if (user_input in ['yes', 'y']):
+        print ("You get out of the car and walk up the mansion steps.")
+        enter_mansion_profanity_ending()
+    elif (user_input in ['no', 'n']):
+        print("The car blows up and you die\n")
+        main()
+    if user_input in (['Contra_ending_2', 'contra 2']):
+        Contra_ending_2()
+
+    else :
+        print ("please either select yes or no.\n")
+        main()
+
+def enter_mansion_profanity_ending():
+    answer = input("The door opens, what do you say? ")
+    if answer in (['yes', 'no', 'y', 'n']):
+        print("This is not a yes or no question\n")
+        enter_mansion_profanity_ending()
+    elif answer in (["fuck", ' shit', 'damn', 'hell','ass', 'dick']):
+            print ("CONGRATS! YOU WON!you then are killed by the OwO parents who fear for their child's sanity. you have acheived the profanity ending")
+            main()
+    else:
+        print("\nYou are met with eerie silence\n")
+        enter_mansion()
+    
+def enter_mansion():
+    answer = input("\nwould you like to enter the mansion or explore outside?")
+    if  (answer in ['explore', 'explore outside','stay outside', 'outside']):
+       print ("\n\nYou explore outside the mansion and find nothing")
+       enter_mansion()
+    if  (answer in ['go inside', 'enter mansion', 'enter']):
+            mansion_entry_room()
+    else :
+        enter_mansion()
+
+def mansion_entry_room():
+    answer = input ("\n\nAs you enter the entry room, you see a flight of stairs, and a hallway leading off to a dark room.\n above you, you see a chandelier.\n where would you like to go?")
+    if  (answer in ['go upstairs', 'go up the stairs', 'explore the stairs', 'stairs']):
+        up_stairs()
+    if  (answer in ['explore hallway', 'hallway', 'enter hallway', 'go down hallway' ]):
+        down_hall()
+    if (answer in ['bathroom', 'go to the bathroom',]):
+        Leo_lvl_ending()
+    if (answer in [ 'leave', "go back outside"]):
+        try_to_leave()
+    if (answer in ['chandelier', "investigate chandelier"]):
+        chandelier_ending()
+    else:
+        print ('please answer again')
+        mansion_entry_room()
+
+def try_to_leave():
+    print ("\n\nThe doors slam shut, locking you inside.")
+    mansion_entry_room()
+
+def Leo_lvl_ending():
+    answer = input ("go to the bathroom?")  
+    if (answer in ['yes', 'ye', "y"]):
+        print ("\n\nyou see the OwO demon who owns the house recording you on onlyfans.\n You die from embarresment.\n You have acheived Leo's OwO ending:D")
+        main()
+
+def up_stairs():
+    answer = input ("\n\nYou go up the stairs, and you see two hallways would you like to go to the left or to the right?")
+    if  answer in (["go left", 'left']):
+        left_up_stairs()
+    if  answer in ([ " go right", 'right']):
+        right_up_stairs()
+   
+    else:
+        print (" please either select left or right")
+        up_stairs()
+
+def down_hall():
+    answer = input ('\n\nyou go down the hall into the dark room and in the dim light, see a light switch. Turn on the lights?')
+    if answer in (["yes", "y", 'ye']):
+        down_hall_light_on()
+
+def left_up_stairs():
+    answer = input ("\n\nyou enter a dimmly lit room and turn on the lights. in this room you find a sword. press A to continue")
+    if (answer in ["A"]):
+        continue_with_sword()
+
+    else:
+        print ("Please press A to continue")
+        left_up_stairs()
+    
+def right_up_stairs():
+    answer = input ("\n\nyou enter a dimmly lit room and turn on the lights. in this room you find a sword. press A to continue")   
+    if (answer in ["A"]):
+        continue_with_sword()
+
+    else:
+        print ("Please press A to continue")
+        right_up_stairs()
+
+def continue_with_sword():
+    answer = input ("you walk foreward and pick up the sword, light reflecting off of it's ruby embedded hilt.\n you exit the room, walk down the stairs, and find yourself in the main entry room again.\n you can now type :sword to use your sword\nA to continue")
+    if (answer in ["A"]):
+        mansion_entry_room_2()
+
+def mansion_entry_room_2():
+    answer = input ("\n\nAs you enter the entry room, you see a hallway leading off to a dark room.\n above you, you see a chandelier.\n the stairs are now off limits. \n where would you like to go?")
+    if  (answer in  ['go upstairs', 'go up the stairs', 'explore the stairs', 'stairs']):
+        print ("This is no longer a valid option")
+        mansion_entry_room_2()
+    if  (answer in ['explore hallway', 'hallway', 'enter hallway', 'go down hallway' ]):
+        down_hall()
+    if (answer in ['bathroom', 'go to the bathroom',]):
+        Leo_lvl_ending()
+    if (answer in [ 'leave', "go back outside"]):
+        try_to_leave
+    if (answer in ['chandelier', 'explore chandelier']):  
+        chandelier_ending()
+    else:
+            print ('please answer again')
+            mansion_entry_room()
+
+def chandelier_ending():
+    print ("you jump up and grab the chandelier. It falls onto you, instantly killing you.\n You have achieved the chandelier ending!")
+    main()
+
+def down_hall_light_on():
+    answer = input ("You turn on a light and see the OwO dog.It starts barking and runs to you. what do you do?\n\n")
+    if (answer in ['pet it', "stay", 'stay in place', 'hug it' ]):
+        print ("the OwO dog is not a happy dog. it eats you.\n\nyou have achieved the angry doggo ending!")
+    elif (answer in ["run", 'hide', 'scream and run']):
+     run_from_dog()
+    if (answer in ["use sword", 'sword', ':sword']):
+        kill_dog()
+
+def kill_dog():
+    print ("You slice the dog open with your sword. as you roll the dog over, you see that it's collar has a picture of the OwO family, and the pain is to much for you. you jump out of a window and die. You have achieved the suicide ending. (BTW: the dog actually was just possesing another dead dog, and so the OwO dog is still alive:D sorry if I made you sad.")
+    main()
+
+def run_from_dog():
+    answer = input ("you run from the dog and it chases you back down the hallway. to your right, you see a door you have not seen before.\n\n A to continue.")
+    if (answer in ['A', 'a']):
+        new_room()
+    elif (answer in ['sword', 'use sword', ':sword']):
+        kill_dog()
+    else:
+        print ("please enter a valid command")
+        run_from_dog()
+
+def new_room():
+    answer = input ("You slam the door shut behind you. The OwO dog is barking its heart out.\n\n Your heartbeat quickens as you hear foot steps. you quikley scan the room, looking fore something to defend yourelf.\n\nYou find nothing.\nas you look up at the ceiling in despair, you see a trapdoor. will you explore the trapdoor, or take your chances with an OwO demon?")
+    if (answer in ["take my chances with the OwO demon", 'fight', ':sword', ':sword', 'take my chances']):
+        OwO_death_ending()
+    if (answer in [ 'run', 'escape', 'explore trapdoor']):
+        upstairs_room_2()
+    else:
+        print ("please select a valid answer")
+        new_room()
+
+def OwO_death_ending():
+    print ("Contragulations. you could not even get a secret ending. you were killed by an OwO demon. LOL NOOB XD")
+    main()
+
+def upstairs_room_2():
+    answer = input ("You shut the trapdoor behind you. You are in a room with bright lights. It looks like a bedroom. on one wall, there is a soft bed. On another wall, there is a window. below the window outside, there is a big bush. It looks like you could survive the jump just fine, but you are not being pursued. you can either read a book, jump out the window, or lay down on the bed")
+    if (answer in ['read a book', 'book', 'bed', 'lay down on bed', 'relax on bed']):
+        SUS_ending()
+        
+    elif (answer in [ 'suicide', "jump out window", 'window', 'climb out window']):
+         Max_lvl_ending_pt_1()
+    else:
+        print ("please select a valid option")
+        upstairs_room_2()
+        
+def SUS_ending():
+    answer = input ("You are lieing on the bed when the OwO teenager comes in an stares at you. What do you do?")
+    if (answer in ['twirk', 'pose on the bed']):
+        print ("your moves do not inpress the OwO teenager. they throw you off the bed and then go to attack you. you can run or fight.")
+        if (answer in ['run', 'fight']):
+            OwO_death_ending()
+    if (answer in ["show them your onlyfans"]):
+        print ("You show them your onlyfans and they giggle. they then *NOT APPROVED FOR CHILDREN. THE FOLLOWING HAS BEEN REMOVED. you have achieved the pervert ending!")
+    
+    elif (answer in ['jump out window', 'window']):
+        print ("You jump out of the window.")
+        Max_lvl_ending_pt_1()
+
+def Max_lvl_ending_pt_1():
+    answer = input ("You jump out of the window, and miss the bushes below entirely. instead, you land on an ant wedding, killing one of the ants. the ants scatter, then contact the ant military to avange their fallen bretheren. A to continue")
+    if (answer in ["a", 'A']):
+        Max_lvl_ending_pt_2()
+    else:
+        print ("Please either type A or a. thank you.")
+        max_lvl_ending_pt_1()
+
+def Max_lvl_ending_pt_2():
+    answer = input ("The ant's army soon arrives. they have tanks, bazookas, and RPGs. what will you do?")
+    if (answer in ['run', 'hide']):
+        print (" You run around the yard as explosions erupt behind you. you cower in the OwO dog house, but it is no use. they overpower the wood of the doghouse.\n\n")
+        explosion_ending()
+    if (answer in ['sword',':sword','fight']):
+        fight_the_ants_ending_pt_1()
+    
+    if (answer in ['repent', 'go to church', 'repent your sins']):
+        church_continue_game()
+    
+    else:
+        print ("Please select a valid option")
+        Max_lvl_ending_pt_2()
+
+def explosion_ending():
+    print ("the doghouse is blown up by the ant's weapons. You have achieved the ant army ending!")
+
+def fight_the_ants_ending_pt_1():
+    print (" you swing your sword wildly, but the ants quikley blow it to smithereens. You now longer have a sword. next to you, you se a stick. What will you do?")
+    if (answer in ['use stick' , 'fight', 'run', 'pick up stick']):
+        OP_ant_ending()
+    if (answer in ['repent', 'go to church', 'repent your sins']):
+        church_continue_game()
+
+def OP_ant_ending():
+    print (" It is no use. The ants kill you with their ridiculously overpowered weapons. you have achieved the ant ending.")
+    main()
+
+def church_continue_game():
+    answer = input (" As you begin to repent, the ground opens up beneath you, and you fall down. A to continue")
+    if (answer in ['a', 'A']):
+     church_continue_no_sword()
+    else:
+        print ("Please type a or A.")
+        church_continue_game()
+
+def church_continue_no_sword():
+    answer = input ("You are in a church. You have lost your sword. When you decide to explore, you see two doors. A locked, and an unlocked. Which door will you explore?")
+
+    if (answer in ['locked door', 'lock']):
+        Contra_ending()
+    if (answer in ['unlocked door', "not locked door"]):
+        unlocked_door()
+
+def Contra_ending():
+    input (" You come up to the locked door, and see it has a origional nintendo keypad with a mini Contra figure. What code will you enter?")
+    if answer in (['up down up down left right a b start', 'updownupdownleftrightabstart']):
+     Contra_ending_2()
+
+def Contra_ending_2():
+    answer = input ("You unlock the Contra door and find. . . a chicken.do you think this chicken will be usefull?")
+    if (answer in ['yes', 'ye', 'y']):
+        print (" You now have a chicken following you 24/7. this chicken however, is special. It can go full god mode and decimate anything in it's way. sadly, it con only go god mode 1 time, so use the chicken wisley. You can now type :chicken when the final battle comes.")
+        unlocked_door()
+     
+    if (answer in ['no', 'n']):
+        print ("FOOL! I, THE GREAT CREATOR. LOVE CHICKENS. DO YOU NOT ACCEPT THIS GIFT OF WHICH I BESTOW APON YOU? DIE! you then die. you have achieved the shamefull ending.")
+        main()
+
+def unlocked_door():
+    answer = input ("You go through the unlocked door into a room where you see all of the OwO familly gathered together, eating dinner. They all stop and stare at you. then scream. It is pandemonium. then, they all grab knifes and begin advancing on you. what will you do?")
+    if (answer in [':chicken', 'chicken']):
+        print ("The chicken goes god mode, and attackes the OwO family, who's physical bodies are killed. The OwO familly then decides to haunt a nice vacation home in Hawaii. and you are safe for now. \n\n\n OR SO YOU THINK\n You black out. Find out what happens in house of doom 2")
+    if (answer in ['run', 'hide']):
+     OwO_death_ending()
+    else:
+        unlocked_door()
+
+def final_credits():
+
+    print ('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Design: Jackson B\nguide and general help: Toren\n special guest/lvl designer 1:Max \n special guest/lvl designer 2:Unknown\n"constructive" critisism:Aiden\n\n Thanks For Playing!:D')
+    main()
+
+main()
