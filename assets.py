@@ -8,5 +8,11 @@ L L
 
 block = strip("""
  ___
-|  |
+|___|
 """)
+
+ASSET_MAPPING = {
+    'p' : chicken,
+    'b' : block,
+    'a' : "\n"
+}
